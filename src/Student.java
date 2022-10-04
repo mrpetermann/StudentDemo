@@ -1,18 +1,27 @@
 public class Student {
+    //Class properties
     private String firstName;
     private String lastName;
     private double lunchBalance;
     private int studentId;
 
-    //accept name, random id
+    /*
+    Constructor
+    Input: first and last name
+    Process: default lunch balance, random student id [0, 99999]
+     */
     public Student(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.lunchBalance = 0; //Default lunch balance
+        this.lunchBalance = 0;
         this.studentId = (int)Math.floor(Math.random() * 100000);
     }
 
-    //accept name, lunch bal, random id
+    /*
+    Constructor
+    Input: first and last name, lunch balance
+    Process: random student id [0, 99999]
+     */
     public Student(String firstName, String lastName, double lunchBalance) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -20,7 +29,7 @@ public class Student {
         this.studentId = (int)Math.floor(Math.random() * 100000);
     }
 
-    //name, get full name
+    //Name
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName; }
     public String getLastName() { return lastName; }
@@ -29,11 +38,11 @@ public class Student {
         return this.firstName.concat(" ").concat(this.lastName);
     }
 
-    //lunch balance
+    //Lunch balance
     public double getLunchBalance(){ return this.lunchBalance; }
     public void setLunchBalance(double lunchBalance) { this.lunchBalance = lunchBalance; }
 
-    //student id
+    //ID
     public int getStudentId(){ return this.studentId; }
     public void setStudentId(int studentId) { this.studentId = studentId; }
 }
