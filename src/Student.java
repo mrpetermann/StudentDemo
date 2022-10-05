@@ -6,7 +6,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private double lunchBalance;
-    private int studentId;
+    private int studentId; //move to top
 
     /*
     Constructor
