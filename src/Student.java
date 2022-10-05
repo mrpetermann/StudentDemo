@@ -55,7 +55,7 @@ public class Student {
     public double getLunchBalance(){ return this.lunchBalance; }
     public void setLunchBalance(double lunchBalance) { this.lunchBalance = lunchBalance; }
 
-    //ID
+    //Id
     public int getStudentId(){ return this.studentId; }
     public void setStudentId(int studentId) { this.studentId = studentId; }
 }
