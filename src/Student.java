@@ -3,15 +3,15 @@ public class Student {
     private static final int STUDENT_ID_DIGITS = 7;
 
     //Class properties
+    private int studentId;
     private String firstName;
     private String lastName;
     private double lunchBalance;
-    private int studentId;
 
-    /*
-    Constructor
-    Input: first and last name
-    Process: default lunch balance, random student id [0, MAX]
+    /**
+     * Create a new Student
+     * @param firstName First name of student
+     * @param lastName Last name of student
      */
     public Student(String firstName, String lastName) {
         this.firstName = firstName;
@@ -20,10 +20,11 @@ public class Student {
         this.studentId = getRandomStudentId();
     }
 
-    /*
-    Constructor
-    Input: first and last name, lunch balance
-    Process: random student id [0, MAX]
+    /**
+     * Create a new student
+     * @param firstName first name of student
+     * @param lastName last name of student
+     * @param lunchBalance lunch balance of student
      */
     public Student(String firstName, String lastName, double lunchBalance) {
         this.firstName = firstName;
@@ -32,11 +33,9 @@ public class Student {
         this.studentId = getRandomStudentId();
     }
 
-    /*
-    Function: Gets a random student id
-    Process: generate random number, multiply by max value, round down, parse int
-    Input: none
-    Output: random integer
+    /**
+     * Determine a random integer to assign as an id
+     * @return random int [0, max] where max is determined by constant value
      */
     private static int getRandomStudentId() {
         return (int)Math.floor(Math.random() * Math.pow(10, STUDENT_ID_DIGITS));
@@ -47,6 +46,11 @@ public class Student {
     public void setFirstName(String firstName) { this.firstName = firstName; }
     public String getLastName() { return this.lastName; }
     public void setLastName(String lastName) { this.lastName = lastName; }
+
+    /**
+     * Concatenate first name, " ", last name
+     * @return String containing first and last name
+     */
     public String getFullName() {
         return this.firstName.concat(" ").concat(this.lastName);
     }
