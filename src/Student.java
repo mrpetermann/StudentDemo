@@ -3,10 +3,10 @@ public class Student {
     private static final int STUDENT_ID_DIGITS = 7;
 
     //Class properties
+    private final int studentId;
     private String firstName;
     private String lastName;
     private double lunchBalance;
-    private int studentId; //move to top
 
     /**
      * Create a new student
@@ -14,10 +14,10 @@ public class Student {
      * @param lastName last name of student
      */
     public Student(String firstName, String lastName) {
+        this.studentId = getRandomStudentId();
         this.firstName = firstName;
         this.lastName = lastName;
         this.lunchBalance = 0;
-        this.studentId = getRandomStudentId();
     }
 
     /**
@@ -27,10 +27,10 @@ public class Student {
      * @param lunchBalance lunch balance of student
      */
     public Student(String firstName, String lastName, double lunchBalance) {
+        this.studentId = getRandomStudentId();
         this.firstName = firstName;
         this.lastName = lastName;
         this.lunchBalance = lunchBalance;
-        this.studentId = getRandomStudentId();
     }
 
     /**
@@ -56,10 +56,11 @@ public class Student {
     }
 
     //Lunch balance
-    public double getLunchBalance(){ return this.lunchBalance; }
+    public double getLunchBalance(){
+        return this.lunchBalance;
+    }
     public void setLunchBalance(double lunchBalance) { this.lunchBalance = lunchBalance; }
 
     //Id
     public int getStudentId(){ return this.studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
 }
