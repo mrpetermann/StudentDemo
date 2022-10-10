@@ -38,7 +38,7 @@ public class Student {
      * @return Random id as int
      */
     private static int getRandomStudentId() {
-        return (int)Math.floor(Math.random() * Math.pow(10, STUDENT_ID_DIGITS));
+        return (int)(Math.random() * Math.pow(10, STUDENT_ID_DIGITS));
     }
 
     //Name
