@@ -63,4 +63,13 @@ public class Student {
 
     //Id
     public int getStudentId(){ return this.studentId; }
+
+    /**
+     * Test whether two students are equal
+     * @param otherStudent student to compare to
+     * @return true if two students have same full name
+     */
+    public boolean equals(Student otherStudent) {
+        return this.getFullName().equals(otherStudent.getFullName());
+    }
 }
