@@ -53,8 +53,9 @@ public class StudentDemo {
             System.out.println("Invalid initial deposit.");
         }
 
-        //Test whether two students are the same
-        System.out.println("Students are same: " + studentA.equals(studentB));
+        //If students exist, test whether they are the same
+        if(studentA != null && studentB != null)
+            System.out.println("Students are same: " + studentA.equals(studentB));
 
         //Close connection to terminal
         in.close();
