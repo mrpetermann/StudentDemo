@@ -36,8 +36,6 @@ public class StudentDemo {
             lunchBalance = Double.parseDouble(in.nextLine());
         } while(lunchBalance < 0);
 
-        in.close();
-
         return new Student(firstName, lastName, lunchBalance);
     }
 
