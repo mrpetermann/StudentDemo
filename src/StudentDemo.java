@@ -1,17 +1,20 @@
 import java.util.Scanner;
 
 public class StudentDemo {
+    private static final int STUDENT_COUNT = 1300;
+
     public static void main(String[] a) {
-        //Create students
-        Student studentA = getStudent();
-        Student studentB = getStudent();
+        Student[] students = new Student[STUDENT_COUNT];
 
-        //Print students
-        printStudent(studentA);
-        printStudent(studentB);
+        //loop while more students to add
+        students[0] = new Student("Ray", "S..."); //replace with getStudent()
+        students[1] = new Student("Connor", "Boyle", 1);
+        students[2] = new Student("Phil", "Swift", 3539);
 
-        //Test whether two students are the same
-        System.out.println("Students are same: " + studentA.equals(studentB));
+        for(int i=0; i < students.length; i++) {
+            if(students[i] != null)
+                System.out.println(students[i].getFullName() + " has $" + students[i].getLunchBalance());
+        }
     }
 
     /**
