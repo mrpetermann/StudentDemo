@@ -1,20 +1,22 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentDemo {
-    private static final int STUDENT_COUNT = 1300;
-
     public static void main(String[] a) {
-        Student[] students = new Student[STUDENT_COUNT];
+        Scanner in = new Scanner(System.in);
+        ArrayList<Student> studentArrayList = new ArrayList<>();
 
-        //loop while more students to add
-        students[0] = new Student("Ray", "S..."); //replace with getStudent()
-        students[1] = new Student("Connor", "Boyle", 1);
-        students[2] = new Student("Phil", "Swift", 3539);
+        String response;
+        do {
+            studentArrayList.add(getStudent());
 
-        for(int i=0; i < students.length; i++) {
-            if(students[i] != null)
-                System.out.println(students[i].getFullName() + " has $" + students[i].getLunchBalance());
-        }
+            System.out.println("Add another student? y/n");
+            response = in.nextLine();
+        } while(response.startsWith("y"));
+
+        //Print student information
+        for(int i=0; i < studentArrayList.size(); i++)
+            printStudent(studentArrayList.get(i));
     }
 
     /**
@@ -50,6 +52,7 @@ public class StudentDemo {
         System.out.println("Student: " + student.getFullName());
         System.out.println("ID: " + student.getStudentId());
         System.out.println("Balance: $" + student.getLunchBalance());
+        System.out.println();
     }
 }
 
