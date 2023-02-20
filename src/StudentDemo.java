@@ -15,8 +15,8 @@ public class StudentDemo {
         } while(response.startsWith("y"));
 
         //Print student information
-        for(int i=0; i < studentArrayList.size(); i++)
-            printStudent(studentArrayList.get(i));
+        for(Student student : studentArrayList)
+            printStudent(student);
     }
 
     /**
