@@ -27,7 +27,7 @@ public class StudentDemo {
         Scanner in = new Scanner(System.in);
         String firstName;
         String lastName;
-        double lunchBalance = 0;
+        double lunchBalance;
 
         //Get values from user for studentA
         System.out.println("Enter student first name:");
